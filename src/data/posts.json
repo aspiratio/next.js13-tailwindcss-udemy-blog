@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": "next.js13-udemy",
+      "title": "Next.js13をUdemyで学ぶ",
+      "content": "App Router を使ってブログを作成",
+      "createdAt": "2023/09/11"
+    },
+    {
+      "id": "json-server",
+      "title": "JSONサーバー",
+      "content": "JSONサーバーを使ってモックデータを作成します。json-serverのライブラリをインストールし、src/dataディレクトリにjsonファイルを作成します。サーバーを立ててそれを読み込みます。",
+      "createdAt": "2023/09/11"
+    }
+  ]
+}
