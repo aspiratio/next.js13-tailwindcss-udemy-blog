@@ -25,8 +25,6 @@ export const getDetailArticle = async (id: string): Promise<Article> => {
     throw new Error("エラーが発生しました")
   }
 
-  await new Promise((resolve) => setTimeout(resolve, 1000))
-
   const article = await res.json()
   return article
 }
