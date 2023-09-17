@@ -1,7 +1,5 @@
 import { getAllArticles } from "@/blogAPI"
 import ArticleList from "@/components/ArticleList"
-import { supabase } from "@/utils/supabaseClients"
-import Image from "next/image"
 
 export default async function Home() {
   // json-server用
