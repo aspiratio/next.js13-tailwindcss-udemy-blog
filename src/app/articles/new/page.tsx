@@ -14,7 +14,17 @@ const CreateBlogPage = () => {
     e.preventDefault() // ブラウザのデフォルトの挙動（リロードなど）を防ぐ
 
     setIsLoading(true)
-    await createArticle(id, title, content)
+    // await createArticle(id, title, content)
+
+    const API_URL = process.env.NEXT_PUBLIC_API_URL
+
+    await fetch(`${API_URL}/api/create`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id, title, content }),
+    })
 
     setIsLoading(false)
     router.push("/")
