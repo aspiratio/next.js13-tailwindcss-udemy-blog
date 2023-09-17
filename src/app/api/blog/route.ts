@@ -20,7 +20,7 @@ NextApiResponse 型は、Response 型に加えて、以下のプロパティを�
 req: Request, res: Response と req: NextApiRequest, res: NextApiResponse の違いは、req と res の型が異なることです。NextApiRequest 型と NextApiResponse 型は、Request 型と Response 型を拡張しているため、より多くの機能を利用することができます。
 */
 
-export async function GET(req: Request) {
+export async function GET() {
   const { data, error } = await supabase.from("posts").select("*")
 
   if (error) {
