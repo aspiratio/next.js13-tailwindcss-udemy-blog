@@ -1,3 +1,6 @@
+/* 
+App Routerを使わない書き方（Route Handlers）
+
 import { supabase } from "@/utils/supabaseClients"
 import { NextApiRequest, NextApiResponse } from "next"
 
@@ -13,3 +16,4 @@ export default async function handler(
 
   return res.status(200).json(data)
 }
+ */
