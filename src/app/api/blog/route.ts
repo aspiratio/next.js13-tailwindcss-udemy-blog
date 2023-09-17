@@ -30,3 +30,17 @@ export async function GET(req: Request, res: NextApiResponse) {
 
   return NextResponse.json(data, { status: 200 })
 }
+
+export async function POST(req: Request) {
+  const { id, title, content } = await req.json()
+  const { data, error } = await supabase
+    .from("posts")
+    .insert([{ id, title, content, createdAt: new Date().toISOString() }])
+    .select()
+
+  if (error) {
+    return NextResponse.json(error)
+  }
+
+  return NextResponse.json(data, { status: 201 })
+}
