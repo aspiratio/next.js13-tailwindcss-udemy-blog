@@ -1,3 +1,6 @@
+/* 
+App Routerを使わない書き方（Route Handlers）
+
 import { supabase } from "@/utils/supabaseClients"
 import { NextApiRequest, NextApiResponse } from "next"
 import { notFound } from "next/navigation"
@@ -37,3 +40,4 @@ export default async function handler(
       return res.status(200).json({ message: "削除に成功しました" })
   }
 }
+ */
